@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+    --bg: #9bd4f0;
+    --primary: #efac36;
+    --primary-light: #f0b54a;
+    --font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  input, button {
+    border: 0;
+    outline: none;  
   }
-  to {
-    transform: rotate(360deg);
+  
+  body {
+    background-color: var(--bg);
+    font-family: var(--font-family);
   }
-}
+    
+  .container {
+    width: 320px;
+    margin: 100px auto;
+    background-color: var(--primary);
+    padding: 3rem 2.5rem;
+    color: #2f4e4e;
+    border-radius: 5px;
+  }
+  
+  .form {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+  
+  .form__input {
+    font-size: 18px;
+    padding: 1rem;
+  }
+  
+  .form__button {
+    background: burlywood;
+    color: inherit;
+    font-size: 17px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 0 1rem;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .form__button:hover {
+    filter: brightness(110%);
+  } 
+  
+  .title {
+    font-size: 2.7rem;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+  }
+  
+  .todos__item {
+    display: flex;
+    align-items: center;
+    justify-content: unsafe;
+    background-color: var(--primary-light);
+    padding: 1.5rem 2.5rem;
+    margin: .4rem -2.5rem;
+  }
+  
+  .todos__item span {
+    font-size: 20px;
+    margin-left: .3rem;
+  }
+  
+  .todos__item box-icon {
+    cursor: pointer;
+  }
+  
+  .todos__item box-icon:last-of-type {
+    margin-left: auto;
+  }
+  
+  .todos__item.completed {
+    font-style: italic;
+    text-decoration: line-through;
+  }
+  
+  .todos__item.completed * {
+    opacity: .5;
+  }
